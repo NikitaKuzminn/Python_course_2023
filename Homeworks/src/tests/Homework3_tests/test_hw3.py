@@ -2,7 +2,7 @@ import inspect
 import string
 
 import pytest
-from Homeworks.Homework3.src.main.homework3 import custom_range
+from Homeworks.src.main.Homework3.homework3 import custom_range
 
 
 @pytest.mark.parametrize(

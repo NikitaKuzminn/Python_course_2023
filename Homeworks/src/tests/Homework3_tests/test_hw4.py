@@ -1,6 +1,6 @@
 import pytest
 
-from Homeworks.Homework3.src.main.homework4 import combinations
+from Homeworks.src.main.Homework3.homework4 import combinations
 
 
 @pytest.mark.parametrize(

@@ -1,4 +1,4 @@
-from Homeworks.Homework3.src.main.homework2 import cache
+from Homeworks.src.main.Homework3.homework2 import cache
 
 
 def test_cache():

@@ -1,7 +1,8 @@
 import os
 
 import pytest
-from Homeworks.Homework3.src.main.homework1 import check_data, validate_date, validate_line
+
+from Homeworks.src.main.Homework3.homework1 import check_data, validate_date, validate_line
 
 data = [
     "baz@example.com 729.83 USD accountName 2021-01-02",
