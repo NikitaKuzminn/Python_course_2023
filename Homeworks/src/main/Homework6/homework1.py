@@ -20,11 +20,10 @@ for _ in merge_elems(a, b, c, d):
 
 def merge_elems(*elems):
     for elem in elems:
-        if isinstance(elem, (list, tuple)):
+        if isinstance(elem, str):
+            yield from elem
+        elif hasattr(elem, '__iter__'):  # check if elem is iterable
             yield from merge_elems(*elem)
-        elif hasattr(elem, '__iter__') and not isinstance(elem, str):
-            for sub_elem in merge_elems(*elem):
-                yield sub_elem
         else:
             yield elem
 
