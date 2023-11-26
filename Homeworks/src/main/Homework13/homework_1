@@ -1,0 +1,57 @@
+# Please, complete the following task.
+# For this site https://www.saucedemo.com/
+#  using Selenium Webdriver methods need to create some script with these steps:
+#  1. open site (https://www.saucedemo.com/)
+#  2. paste correct name into Username field (info below)
+#  3. paste correct password into Password field (info below also)
+#  4. click to Login button
+#  5. get current URL
+#  6. check that current URL and expected URL (https://www.saucedemo.com/inventory.html, for example) are the same
+# IMPORTANT OBJECTIVE FOR THIS TASK:
+# need to use at least 2 different methods for locators search (for example, using DOM and XPath: By.ID for username
+# field and By.XPATH for password field)
+
+
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+
+
+class LoginPage:
+    username_field = (By.ID, "user-name")
+    password_field = (By.XPATH, "//input[@id='password' and contains(@class, 'input_error')]")
+    login_button = (By.CSS_SELECTOR, "input.submit-button.btn_action")
+
+    def __init__(self, driver):
+        # Set up the WebDriver
+        self.driver = driver
+
+    def open_page(self):
+        # Step 1: Open the site
+        self.driver.get("https://www.saucedemo.com/")
+
+    def login(self, username, password):
+        # Step 2: Paste correct name into Username field
+        self.driver.find_element(*self.username_field).send_keys(username)
+        # Step 3: Paste correct password into Password field
+        self.driver.find_element(*self.password_field).send_keys(password)
+        # Step 4: Click Login button
+        self.driver.find_element(*self.login_button).click()
+
+    def validate_url(self):
+        # Step 5: Get current URL
+        current_url = self.driver.current_url
+        # Step 6: Check that current URL matches the expected URL
+        expected_url = "https://www.saucedemo.com/inventory.html"
+        assert current_url == expected_url
+
+
+def login_ex():
+    driver = webdriver.Chrome()
+    login = LoginPage(driver)
+    login.open_page()
+    login.login("standard_user", "secret_sauce")
+    login.validate_url()
+
+
+if __name__ == "__main__":
+    login_ex()
