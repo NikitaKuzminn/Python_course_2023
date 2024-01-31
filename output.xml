@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.11.3 on win32)" generated="2024-01-25T19:06:56.823910" rpa="false" schemaversion="5">
+<suite id="s1" name="Demoblaze Test" source="c:\Users\Nikita_Kuzmin\Documents\GitHub\Python_course_2023\Homeworks\src\RobotHW\demoblaze_test.robot">
+<test id="s1-t1" name="LoginTest" line="27">
+<kw name="Open Browser" owner="SeleniumLibrary" type="SETUP">
+<msg time="2024-01-25T19:06:56.981910" level="INFO">Opening browser 'chrome' to base url 'https://www.demoblaze.com/'.</msg>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-01-25T19:06:56.981910" elapsed="2.281135"/>
+</kw>
+<kw name="ClickLogInButton" owner="resources">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${HOME_PAGE_LOGIN_BUTTON}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-01-25T19:06:59.264344" elapsed="0.016533"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-01-25T19:06:59.280877" level="INFO">Clicking element 'id:login2'.</msg>
+<msg time="2024-01-25T19:07:00.483094" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-6.png"&gt;&lt;img src="selenium-screenshot-6.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-01-25T19:07:00.484095" level="FAIL">ElementClickInterceptedException: Message: element click intercepted: Element &lt;a class="nav-link" href="#" id="login2" data-toggle="modal" data-target="#logInModal" style="display: block;"&gt;...&lt;/a&gt; is not clickable at point (300, 86). Other element would receive the click: &lt;img class="d-block img-fluid" src="Samsung1.jpg" alt="First slide"&gt;
+  (Session info: chrome=120.0.6099.225)
+Stacktrace:
+	GetHandleVerifier [0x00007FF6AA6A2142+3514994]
+	(No symbol) [0x00007FF6AA2C0CE2]
+	(No symbol) [0x00007FF6AA1676AA]
+	(No symbol) [0x00007FF6AA1B88F3]
+	(No symbol) [0x00007FF6AA1B68ED]
+	(No symbol) [0x00007FF6AA1B40EC]
+	(No symbol) [0x00007FF6AA1B2EA5]
+	(No symbol) [0x00007FF6AA1A6A0F]
+	(No symbol) [0x00007FF6AA1D5FEA]
+	(No symbol) [0x00007FF6AA1A63B6]
+	(No symbol) [0x00007FF6AA1D6490]
+	(No symbol) [0x00007FF6AA1F28F6]
+	(No symbol) [0x00007FF6AA1D5D93]
+	(No symbol) [0x00007FF6AA1A4BDC]
+	(No symbol) [0x00007FF6AA1A5C64]
+	GetHandleVerifier [0x00007FF6AA6CE16B+3695259]
+	GetHandleVerifier [0x00007FF6AA726737+4057191]
+	GetHandleVerifier [0x00007FF6AA71E4E3+4023827]
+	GetHandleVerifier [0x00007FF6AA3F04F9+689705]
+	(No symbol) [0x00007FF6AA2CC048]
+	(No symbol) [0x00007FF6AA2C8044]
+	(No symbol) [0x00007FF6AA2C81C9]
+	(No symbol) [0x00007FF6AA2B88C4]
+	(No symbol) [0x00007FFD584B7344]
+	RtlUserThreadStart [0x00007FFD5A4A26B1+33]
+</msg>
+<arg>${HOME_PAGE_LOGIN_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="FAIL" start="2024-01-25T19:06:59.280877" elapsed="1.207218">ElementClickInterceptedException: Message: element click intercepted: Element &lt;a class="nav-link" href="#" id="login2" data-toggle="modal" data-target="#logInModal" style="display: block;"&gt;...&lt;/a&gt; is not clickable at point (300, 86). Other element would receive the click: &lt;img class="d-block img-fluid" src="Samsung1.jpg" alt="First slide"&gt;
+  (Session info: chrome=120.0.6099.225)
+Stacktrace:
+	GetHandleVerifier [0x00007FF6AA6A2142+3514994]
+	(No symbol) [0x00007FF6AA2C0CE2]
+	(No symbol) [0x00007FF6AA1676AA]
+	(No symbol) [0x00007FF6AA1B88F3]
+	(No symbol) [0x00007FF6AA1B68ED]
+	(No symbol) [0x00007FF6AA1B40EC]
+	(No symbol) [0x00007FF6AA1B2EA5]
+	(No symbol) [0x00007FF6AA1A6A0F]
+	(No symbol) [0x00007FF6AA1D5FEA]
+	(No symbol) [0x00007FF6AA1A63B6]
+	(No symbol) [0x00007FF6AA1D6490]
+	(No symbol) [0x00007FF6AA1F28F6]
+	(No symbol) [0x00007FF6AA1D5D93]
+	(No symbol) [0x00007FF6AA1A4BDC]
+	(No symbol) [0x00007FF6AA1A5C64]
+	GetHandleVerifier [0x00007FF6AA6CE16B+3695259]
+	GetHandleVerifier [0x00007FF6AA726737+4057191]
+	GetHandleVerifier [0x00007FF6AA71E4E3+4023827]
+	GetHandleVerifier [0x00007FF6AA3F04F9+689705]
+	(No symbol) [0x00007FF6AA2CC048]
+	(No symbol) [0x00007FF6AA2C8044]
+	(No symbol) [0x00007FF6AA2C81C9]
+	(No symbol) [0x00007FF6AA2B88C4]
+	(No symbol) [0x00007FFD584B7344]
+	RtlUserThreadStart [0x00007FFD5A4A26B1+33]
+</status>
+</kw>
+<status status="FAIL" start="2024-01-25T19:06:59.264046" elapsed="1.224049">ElementClickInterceptedException: Message: element click intercepted: Element &lt;a class="nav-link" href="#" id="login2" data-toggle="modal" data-target="#logInModal" style="display: block;"&gt;...&lt;/a&gt; is not clickable at point (300, 86). Other element would receive the click: &lt;img class="d-block img-fluid" src="Samsung1.jpg" alt="First slide"&gt;
+  (Session info: chrome=120.0.6099.225)
+Stacktrace:
+	GetHandleVerifier [0x00007FF6AA6A2142+3514994]
+	(No symbol) [0x00007FF6AA2C0CE2]
+	(No symbol) [0x00007FF6AA1676AA]
+	(No symbol) [0x00007FF6AA1B88F3]
+	(No symbol) [0x00007FF6AA1B68ED]
+	(No symbol) [0x00007FF6AA1B40EC]
+	(No symbol) [0x00007FF6AA1B2EA5]
+	(No symbol) [0x00007FF6AA1A6A0F]
+	(No symbol) [0x00007FF6AA1D5FEA]
+	(No symbol) [0x00007FF6AA1A63B6]
+	(No symbol) [0x00007FF6AA1D6490]
+	(No symbol) [0x00007FF6AA1F28F6]
+	(No symbol) [0x00007FF6AA1D5D93]
+	(No symbol) [0x00007FF6AA1A4BDC]
+	(No symbol) [0x00007FF6AA1A5C64]
+	GetHandleVerifier [0x00007FF6AA6CE16B+3695259]
+	GetHandleVerifier [0x00007FF6AA726737+4057191]
+	GetHandleVerifier [0x00007FF6AA71E4E3+4023827]
+	GetHandleVerifier [0x00007FF6AA3F04F9+689705]
+	(No symbol) [0x00007FF6AA2CC048]
+	(No symbol) [0x00007FF6AA2C8044]
+	(No symbol) [0x00007FF6AA2C81C9]
+	(No symbol) [0x00007FF6AA2B88C4]
+	(No symbol) [0x00007FFD584B7344]
+	RtlUserThreadStart [0x00007FFD5A4A26B1+33]
+</status>
+</kw>
+<kw name="ValidateLoginAndPasswordFieldsArePresented" owner="resources">
+<status status="NOT RUN" start="2024-01-25T19:07:00.489094" elapsed="0.000000"/>
+</kw>
+<kw name="LoginToApplication" owner="resources">
+<status status="NOT RUN" start="2024-01-25T19:07:00.490095" elapsed="0.000000"/>
+</kw>
+<kw name="checkLogOutButtonIsVisible" owner="resources">
+<status status="NOT RUN" start="2024-01-25T19:07:00.490095" elapsed="0.000000"/>
+</kw>
+<kw name="validateWelcomeMessageText" owner="resources">
+<arg>Welcome ${login}</arg>
+<status status="NOT RUN" start="2024-01-25T19:07:00.491096" elapsed="0.000000"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-01-25T19:07:00.491096" elapsed="2.111429"/>
+</kw>
+<status status="FAIL" start="2024-01-25T19:06:56.980910" elapsed="5.621615">ElementClickInterceptedException: Message: element click intercepted: Element &lt;a class="nav-link" href="#" id="login2" data-toggle="modal" data-target="#logInModal" style="display: block;"&gt;...&lt;/a&gt; is not clickable at point (300, 86). Other element would receive the click: &lt;img class="d-block img-fluid" src="Samsung1.jpg" alt="First slide"&gt;
+  (Session info: chrome=120.0.6099.225)
+Stacktrace:
+	GetHandleVerifier [0x00007FF6AA6A2142+3514994]
+	(No symbol) [0x00007FF6AA2C0CE2]
+	(No symbol) [0x00007FF6AA1676AA]
+	(No symbol) [0x00007FF6AA1B88F3]
+	(No symbol) [0x00007FF6AA1B68ED]
+	(No symbol) [0x00007FF6AA1B40EC]
+	(No symbol) [0x00007FF6AA1B2EA5]
+	(No symbol) [0x00007FF6AA1A6A0F]
+	(No symbol) [0x00007FF6AA1D5FEA]
+	(No symbol) [0x00007FF6AA1A63B6]
+	(No symbol) [0x00007FF6AA1D6490]
+	(No symbol) [0x00007FF6AA1F28F6]
+	(No symbol) [0x00007FF6AA1D5D93]
+	(No symbol) [0x00007FF6AA1A4BDC]
+	(No symbol) [0x00007FF6AA1A5C64]
+	GetHandleVerifier [0x00007FF6AA6CE16B+3695259]
+	GetHandleVerifier [0x00007FF6AA726737+4057191]
+	GetHandleVerifier [0x00007FF6AA71E4E3+4023827]
+	GetHandleVerifier [0x00007FF6AA3F04F9+689705]
+	(No symbol) [0x00007FF6AA2CC048]
+	(No symbol) [0x00007FF6AA2C8044]
+	(No symbol) [0x00007FF6AA2C81C9]
+	(No symbol) [0x00007FF6AA2B88C4]
+	(No symbol) [0x00007FFD584B7344]
+	RtlUserThreadStart [0x00007FFD5A4A26B1+33]
+</status>
+</test>
+<status status="FAIL" start="2024-01-25T19:06:56.826910" elapsed="5.779619"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Demoblaze Test">Demoblaze Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
